@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { User } from '../model/User';
 
 @Injectable({
@@ -10,7 +11,7 @@ export class UserService {
 
   private users: User[];
   private subject: Subject<string> = new Subject<string>();
-  url: string = 'http://localhost:3000/users';
+  url: string = environment.serverEndpoint + '/users';
 
   constructor(
     private http: HttpClient

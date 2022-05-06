@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class GameService {
 
   private games: Game[];
-  url: string = 'http://localhost:3000/games';
+  url: string;
 
   constructor(
     private http: HttpClient

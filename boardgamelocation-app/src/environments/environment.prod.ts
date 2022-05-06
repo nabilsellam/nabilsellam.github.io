@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  serverEndpoint: 'https://my-json-server.typicode.com/nabilsellam/nabilsellam.github.io'
 };
