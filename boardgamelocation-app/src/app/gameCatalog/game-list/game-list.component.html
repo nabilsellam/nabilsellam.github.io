@@ -1,0 +1,43 @@
+<table class="table table-striped mb-0">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Players</th>
+            <th>Duration</th>
+            <th>Age</th>
+            <th>More</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr
+            *ngFor="let game of games">
+            <th>{{ game.id }}</th>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img 
+                    [src]="'assets/icons/' + game.icoPath"
+                    class="game-icon"/>
+                    <div class="ms-6">
+                        <p class="mb-6">{{ game.title }}</p>
+                    </div>
+                </div>
+            </td>
+            <td>{{ game.minPlayers }} à {{ game.maxPlayers }} joueurs</td>
+            <td>{{ game.minDuration }} à {{ game.maxDuration }} min</td>
+            <td>À partir de {{ game.minAge }} ans</td>
+            <td>
+                <button 
+                class="btn btn-link btn-sm btn-rounded"
+                (click)="selectGame(game)">Détails
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-success"
+    (click)="addGame()">
+    New Game
+</button>

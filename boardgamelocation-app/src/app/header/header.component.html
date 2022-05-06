@@ -1,0 +1,22 @@
+<ul ngbNav #nav="ngbNav" [activeId]="1" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink [routerLink]="['catalog']">Catalog</a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink [routerLink]="['users']">Users List</a>
+      <ng-template ngbNavContent></ng-template>
+    </li>
+    <li ngbDropdown class="nav-item">
+      <a href (click)="false" class="nav-link" ngbDropdownToggle>Profiles</a>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem 
+            *ngFor="let user of users ; let i = index"
+            [id]="i"
+            [routerLink]="['user/',i]">{{ user.username }}
+        </button>
+      </div>
+    </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>

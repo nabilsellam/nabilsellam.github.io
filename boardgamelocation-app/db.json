@@ -1,0 +1,35 @@
+{
+  "games": [],
+  "users": [
+    {
+      "firstname": "Nabil",
+      "lastname": "Sellam",
+      "username": "chouibidi",
+      "email": "chouibidi@gmail.com",
+      "rentedGames": [],
+      "id": 0
+    },
+    {
+      "id": 1,
+      "username": "Sir William Gull",
+      "firstname": "Bruno",
+      "lastname": "Cathala",
+      "email": "brunoc@hala.fr"
+    },
+    {
+      "id": 2,
+      "username": "Vlad",
+      "firstname": "Vlaada",
+      "lastname": "Chvátil",
+      "email": "vlaad@chvat.il"
+    },
+    {
+      "firstname": "Ludo",
+      "lastname": "Maublanc",
+      "username": "ludo",
+      "email": "ludo@ludo.com",
+      "rentedGames": [],
+      "id": 3
+    }
+  ]
+}

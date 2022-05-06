@@ -1,0 +1,32 @@
+<div class="row">
+    
+    <div class="col-md-8 col-sm-8">
+
+        <br/>
+        <!-- Fonction de recherche -->
+        <div>
+            <label for="game-search-input">Recherche : </label>
+            <input id="game-search-input" type="text" class="form-control" name="searchTerm">
+        </div>
+
+        <br/>
+
+        <!-- Liste des jeux -->
+        <app-game-list 
+            [games]="games"
+            (selectedGame)="selectedGameRcv($event)">
+        </app-game-list>
+
+    </div>
+
+    <div class="col-md-4 col-sm-4">
+        <!-- Détail -->
+        <app-game-detail 
+            *ngIf="selectedGame" 
+            [game]="selectedGame"
+            (removedGame)="removedGameRcv($event)"
+            (updatedGame)="updatedGameRcv($event)">
+        </app-game-detail>
+    </div>
+
+</div>

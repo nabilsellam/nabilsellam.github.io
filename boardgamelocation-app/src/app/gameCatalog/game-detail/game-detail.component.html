@@ -1,0 +1,19 @@
+<div class="row-md-4 text-center">
+    <img [src]="'/assets/img/' + game.imgPath" 
+        class="img-thumbnail game-img"
+        alt="game.imgPath">
+    <h2 class="game-title text-center">{{ game.title }}</h2>
+    <p>Note:</p>
+    <p>Reviews:</p>
+    <button class="btn btn-success btn-sm btn-rounded">
+        Rent
+    </button>
+    <button class="btn btn-danger btn-sm btn-rounded"
+        (click)="removeGame()">
+        Remove
+    </button>
+    <button class="btn btn-class btn-sm btn-rounded"
+        (click)="updateGame()">
+        Edit
+    </button>
+</div>

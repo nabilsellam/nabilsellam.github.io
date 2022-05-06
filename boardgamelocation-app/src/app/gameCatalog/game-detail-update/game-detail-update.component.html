@@ -1,0 +1,66 @@
+<form class="form-inline" #gameForm="ngForm">
+    <div class="form-floating mb-3 col-md-2">
+        <input type="text" class="form-control" 
+            id="title" name="title" 
+            [(ngModel)]="game.title" required>
+        <label for="title">Title</label>
+    </div>
+    <div class="row mb-3">
+        <label>Players:</label>
+        <div class="form-floating col-xs-6 col-md-2">
+            <input type="number" class="form-control" 
+                id="minPlayers" name="minPlayers" 
+                [(ngModel)]="game.minPlayers" 
+                required min="1">
+            <label for="minPlayer">Players min</label>
+        </div>        
+        <div class="form-floating col-xs-6 col-md-2">
+            <input type="number" class="form-control" 
+                id="maxPlayers" name="maxPlayers" 
+                [(ngModel)]="game.maxPlayers" required min="1">
+            <label for="maxPlayer">Players max</label>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label>Duration:</label>
+        <div class="form-floating col-xs-6 col-md-2">
+            <input type="number" class="form-control" 
+                id="minDuration" name="minDuration" 
+                [(ngModel)]="game.minDuration" min="0">
+            <label for="minDuration">Duration min</label>
+        </div>        
+        <div class="form-floating col-xs-6 col-md-2">
+            <input type="number" class="form-control" 
+                id="maxDuration" name="maxDuration" 
+                [(ngModel)]="game.maxDuration" min="0">
+            <label for="maxDuration">Duration max</label>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="form-floating col-md-2">
+            <input type="number" class="form-control" 
+                id="minAge" name="minAge" 
+                [(ngModel)]="game.minAge" min="0">
+            <label for="minAge">Age min</label>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="form-floating col-md-4">
+            <input type="text" class="form-control" 
+                id="imgPath" name="imgPath" 
+                [(ngModel)]="game.imgPath">
+            <label for="imgPath">Image Path</label>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="form-floating col-md-4">
+            <input type="text" class="form-control" 
+                id="icoPath" name="icoPath" 
+                [(ngModel)]="game.icoPath">
+            <label for="icoPath">Icon Path</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary"
+        (click)="sendForm(gameForm)"
+        [disabled]="gameForm.invalid">Submit</button>
+  </form>
