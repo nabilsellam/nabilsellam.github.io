@@ -1,5 +1,19 @@
 {
-  "games": [],
+  "games": [
+    {
+      "title": "Concept",
+      "minPlayers": 4,
+      "maxPlayers": 12,
+      "minDuration": 30,
+      "maxDuration": 60,
+      "minAge": 10,
+      "imgPath": "001.jpeg",
+      "icoPath": "001.jpeg",
+      "note": 0,
+      "reviews": [],
+      "id": 1
+    }
+  ],
   "users": [
     {
       "firstname": "Nabil",
