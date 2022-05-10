@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Game } from 'src/app/model/Game';
 import { GameService } from '../services/game.service';
 
@@ -13,7 +14,8 @@ export class GameCatalogComponent implements OnInit {
   selectedGame: Game | undefined;
 
   constructor(
-    private gameService: GameService
+    private gameService: GameService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -22,7 +24,7 @@ export class GameCatalogComponent implements OnInit {
   
   selectedGameRcv(selectedGameId: number) {
     const found = this.games.find(g => g.id == selectedGameId);
-    if (found != null) {
+    if (found) {
       this.selectedGame = found;
     }
   }
@@ -37,17 +39,13 @@ export class GameCatalogComponent implements OnInit {
   }
 
   updatedGameRcv(updatedGameId: number) {
-
+    const navUrl = 'catalog/' + updatedGameId;
+    this.router.navigate([navUrl]);
   }
 
-  updatedGame(updatedGameId: number) {
-    /*
-    this.gameService.updateGame(updatedGameId).subscribe(
-      (res) => {
-        this.getGameList();
-      }
-    );
-    */
+  addGame() {
+    const navUrl = 'catalog/new'
+    this.router.navigate([navUrl]);
   }
 
   getGameList() {

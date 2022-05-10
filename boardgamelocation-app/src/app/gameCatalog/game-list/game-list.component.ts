@@ -20,8 +20,4 @@ export class GameListComponent implements OnInit {
     this.selectedGame.emit(game.id);
   }
 
-  addGame() {
-    
-  }
-
 }

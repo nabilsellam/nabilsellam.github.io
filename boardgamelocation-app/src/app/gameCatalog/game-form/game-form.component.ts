@@ -8,18 +8,14 @@ import { GameService } from '../services/game.service';
   templateUrl: './game-form.component.html',
   styleUrls: ['./game-form.component.css']
 })
-export class GameFormComponent implements OnInit {
+export class GameFormComponent {
 
   constructor(
     private gameService: GameService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-  }
-
   sendForm(gameForm: NgForm) {
-    //this.gameService.addGame(gameForm.value);
     this.gameService.postGame(gameForm.value).subscribe(
       (res) => {
         this.router.navigate(['catalog']);

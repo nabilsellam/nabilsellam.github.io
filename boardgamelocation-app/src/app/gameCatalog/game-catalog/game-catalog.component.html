@@ -16,7 +16,10 @@
             [games]="games"
             (selectedGame)="selectedGameRcv($event)">
         </app-game-list>
-
+        <button class="btn btn-success"
+            (click)="addGame()">
+            New Game
+        </button>
     </div>
 
     <div class="col-md-4 col-sm-4">

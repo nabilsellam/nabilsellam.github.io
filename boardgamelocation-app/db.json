@@ -12,6 +12,32 @@
       "note": 0,
       "reviews": [],
       "id": 1
+    },
+    {
+      "title": "Time's up",
+      "minPlayers": 4,
+      "maxPlayers": 12,
+      "minDuration": 15,
+      "maxDuration": 30,
+      "minAge": 8,
+      "imgPath": "002.jpeg",
+      "icoPath": "002.jpeg",
+      "note": 0,
+      "reviews": [],
+      "id": 2
+    },
+    {
+      "title": "Agricola",
+      "minPlayers": 1,
+      "maxPlayers": 4,
+      "minDuration": 60,
+      "maxDuration": 90,
+      "minAge": 12,
+      "imgPath": "003.jpeg",
+      "icoPath": "003.jpeg",
+      "note": 0,
+      "reviews": [],
+      "id": 3
     }
   ],
   "users": [
@@ -44,6 +70,14 @@
       "email": "ludo@ludo.com",
       "rentedGames": [],
       "id": 3
+    },
+    {
+      "firstname": "Nabil",
+      "lastname": "Sellam",
+      "username": "chouibidi",
+      "email": "chouibidi@gmail.com",
+      "rentedGames": [],
+      "id": 4
     }
   ]
 }
