@@ -64,18 +64,18 @@
       "email": "vlaad@chvat.il"
     },
     {
-      "firstname": "Ludo",
+      "firstname": "Ludovic",
       "lastname": "Maublanc",
-      "username": "ludo",
+      "username": "ludom",
       "email": "ludo@ludo.com",
       "rentedGames": [],
       "id": 3
     },
     {
-      "firstname": "Nabil",
-      "lastname": "Sellam",
-      "username": "chouibidi",
-      "email": "chouibidi@gmail.com",
+      "firstname": "Bruno",
+      "lastname": "Faidutti",
+      "username": "brubru",
+      "email": "bruno.f@idut.ti",
       "rentedGames": [],
       "id": 4
     }

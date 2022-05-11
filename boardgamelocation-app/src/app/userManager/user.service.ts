@@ -37,7 +37,23 @@ export class UserService {
       complete: () => {
         this.subject.next("refresh");
       }
-    }))
+    }));
+  }
+
+  putUser(user: User): Observable<User> {
+    return this.http.put<User>(this.url + `/${user.id}`, user).pipe(tap({
+      complete: () => {
+        this.subject.next("refresh");
+      }
+    }));
+  }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(this.url + `/${id}`).pipe(tap({
+      complete: () => {
+        this.subject.next("refresh");
+      }
+    }));
   }
 
   $event(): Observable<string> {

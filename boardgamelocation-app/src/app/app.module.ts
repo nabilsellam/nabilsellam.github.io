@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { GameDetailUpdateComponent } from './gameCatalog/game-detail-update/game-detail-update.component';
+import { UserEditComponent } from './userManager/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GameDetailUpdateComponent } from './gameCatalog/game-detail-update/game
     HeaderComponent,
     UserFormComponent,
     GameFormComponent,
-    GameDetailUpdateComponent
+    GameDetailUpdateComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

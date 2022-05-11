@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Game } from 'src/app/model/Game';
 
 @Component({
@@ -6,15 +6,12 @@ import { Game } from 'src/app/model/Game';
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.css']
 })
-export class GameListComponent implements OnInit {
+export class GameListComponent {
 
   @Input() games: Game[];
   @Output() selectedGame = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   selectGame(game: Game) {
     this.selectedGame.emit(game.id);

@@ -1,0 +1,29 @@
+<form class="form-inline" #userForm="ngForm" *ngIf="user">
+    <div class="form-floating mb-3 col-md-2">
+        <input type="text" class="form-control" 
+            id="firstname" name="firstname" 
+            [(ngModel)]="user.firstname" required>
+        <label for="firstname">First Name</label>
+    </div>
+    <div class="form-floating mb-3 col-md-2">
+        <input type="text" class="form-control" 
+            id="lastname" name="lastname" 
+            [(ngModel)]="user.lastname" required>
+        <label for="lastname">Last Name</label>
+    </div>
+    <div class="form-floating mb-3 col-md-2">
+        <input type="text" class="form-control" 
+            id="username" name="username" 
+            [(ngModel)]="user.username" required>
+        <label for="username">Username</label>
+    </div>
+    <div class="form-floating mb-3 col-md-2">
+        <input type="text" class="form-control" 
+            id="email" name="email" 
+            [(ngModel)]="user.email" email required>
+        <label for="email">e-Mail address</label>
+    </div>
+    <button type="submit" class="btn btn-primary"
+        (click)="updateUser()"
+        [disabled]="userForm.invalid">Submit</button>
+  </form>

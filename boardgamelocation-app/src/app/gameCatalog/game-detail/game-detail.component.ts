@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Game } from 'src/app/model/Game';
 import { GameService } from '../services/game.service';
 
@@ -7,7 +7,7 @@ import { GameService } from '../services/game.service';
   templateUrl: './game-detail.component.html',
   styleUrls: ['./game-detail.component.css']
 })
-export class GameDetailComponent implements OnInit {
+export class GameDetailComponent {
   
   @Input() game: Game;
   @Output() removedGame = new EventEmitter<number>();
@@ -16,9 +16,6 @@ export class GameDetailComponent implements OnInit {
   constructor(
     private gameService: GameService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   removeGame() {
     this.removedGame.emit(this.game.id);

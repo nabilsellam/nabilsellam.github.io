@@ -1,2 +1,36 @@
 <h2>Users List</h2>
-<p *ngFor="let user of users ; let i = index">{{ i }} : {{ user.username }}</p>
+<table class="table table-striped mb-0">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Username</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr
+            *ngFor="let user of users">
+            <th>{{ user.id }}</th>
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>
+                <a [routerLink]="['profiles/', user.id]">
+                    {{ user.username }}
+                </a>
+            </td>
+            <td>
+                <button 
+                class="btn btn-link btn-sm btn-rounded"
+                [routerLink]="['edit/', user.id]">Edit
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button 
+    class="btn btn-success"
+    [routerLink]="['new']">Add user
+</button>

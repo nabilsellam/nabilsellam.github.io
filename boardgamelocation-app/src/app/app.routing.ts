@@ -3,6 +3,7 @@ import { GameCatalogComponent } from "./gameCatalog/game-catalog/game-catalog.co
 import { GameDetailUpdateComponent } from "./gameCatalog/game-detail-update/game-detail-update.component";
 import { GameFormComponent } from "./gameCatalog/game-form/game-form.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
+import { UserEditComponent } from "./userManager/user-edit/user-edit.component";
 import { UserFormComponent } from "./userManager/user-form/user-form.component";
 import { UserComponent } from "./userManager/user/user.component";
 import { UsersComponent } from "./userManager/users/users.component";
@@ -15,7 +16,8 @@ const APP_ROUTES: Routes = [
     {path: 'catalog/:id', component: GameDetailUpdateComponent},
     {path: 'users', component: UsersComponent},
     {path: 'users/new', component: UserFormComponent},
-    {path: 'user/:id', component: UserComponent},
+    {path: 'users/edit/:id', component: UserEditComponent},
+    {path: 'users/profiles/:id', component: UserComponent},
     {path: '404', component: NotFoundComponent},
     {path: '', redirectTo: 'catalog', pathMatch:'full'},
     {path: '**', redirectTo: '404'}

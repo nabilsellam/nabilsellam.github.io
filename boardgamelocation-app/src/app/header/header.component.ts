@@ -15,11 +15,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.getUsersList();    
     this.userService.$event().subscribe(
-      () => {
-        this.getUsersList();
-      }
+      () => this.getUsersList()
     );
-    }
+  }
 
   getUsersList() {
     this.userService.getUsers().subscribe(

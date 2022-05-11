@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -8,15 +8,12 @@ import { UserService } from '../user.service';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css']
 })
-export class UserFormComponent implements OnInit {
+export class UserFormComponent {
 
   constructor(
     private userService: UserService,
     private router: Router
   ) { }
-
-  ngOnInit(): void {
-  }
 
   sendForm(userForm: NgForm) {
     //envoyer le formulaire

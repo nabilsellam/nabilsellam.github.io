@@ -4,19 +4,19 @@ import { User } from 'src/app/model/User';
 import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-user-edit',
+  templateUrl: './user-edit.component.html',
+  styleUrls: ['./user-edit.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserEditComponent implements OnInit {
 
   user: User;
 
   constructor(
-    private activatedRoute: ActivatedRoute,
     private userService: UserService,
+    private activatedRoute: ActivatedRoute,
     private router: Router
-  ) { }
+    ) { }
 
   ngOnInit(): void {
     this.getUserFromParam();
@@ -34,10 +34,10 @@ export class UserComponent implements OnInit {
     );
   }
 
-  deleteUser(): void {
-    this.userService.deleteUser(this.user.id).subscribe(
-      () => this.router.navigate(['users'])
-    );
+  updateUser(): void {
+    this.userService.putUser(this.user).subscribe({
+      complete: () => this.router.navigate(['users'])
+    });
   }
 
 }

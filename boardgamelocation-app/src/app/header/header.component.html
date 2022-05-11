@@ -13,7 +13,7 @@
         <button ngbDropdownItem 
             *ngFor="let user of users ; let i = index"
             [id]="i"
-            [routerLink]="['user/',i]">{{ user.username }}
+            [routerLink]="['users/profiles/',i]">{{ user.username }}
         </button>
       </div>
     </li>

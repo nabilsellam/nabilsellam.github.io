@@ -17,7 +17,7 @@
             (selectedGame)="selectedGameRcv($event)">
         </app-game-list>
         <button class="btn btn-success"
-            (click)="addGame()">
+            [routerLink]="['catalog/new']">
             New Game
         </button>
     </div>
